@@ -16,5 +16,9 @@ if(!isset($data)) {
   exit("No data supplied!");
 }
 
+//Write the data to the associated file
+$dataFile = fopen("data_file_".id.".csv", "w+");
+fwrite($dataFile, $data.PHP_EOL);
+fclose($dataFile);
 
 ?>
